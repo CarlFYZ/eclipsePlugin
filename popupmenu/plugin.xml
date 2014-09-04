@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+      		adaptable="true"
+            objectClass="org.eclipse.core.resources.IResource"
+            id="popupmenu.contribution1">
+			<filter
+               value="org.eclipse.team.core.repository=org.eclipse.team.cvs.core.cvsnature"
+               name="projectPersistentProperty"/>
+         <action
+               label="New Action 5"
+               class="popupmenu.popup.actions.NewAction"
+               menubarPath="team.main/group2"
+               enablesFor="1"
+               id="popupmenu.newAction">
+         </action>
+         
+      </objectContribution>
+      
+            <objectContribution
+            adaptable="true"
+            objectClass="org.eclipse.team.internal.ccvs.core.ICVSRemoteFile"
+            id="popupmenu.contribution2">
+         <action
+               label="New Action 4"
+               class="popupmenu.popup.actions.NewAction"
+               enablesFor="1"
+               id="popupmenu.newAction2">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
